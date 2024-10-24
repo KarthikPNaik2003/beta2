@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symposium 2025 | AIET</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        /* Header Section */
+        .header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 36px;
+        }
+        .header h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        /* Smooth Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+            text-align: left;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #003366;
+        }
+
+        .style1 {
+            background-color: #f0f8ff;
+            color: #003366;
+            padding: 40px;
+            border-left: 5px solid #003366;
+        }
+
+        .style2 {
+            background-color: #fffbe6;
+            color: #cc3300;
+            padding: 40px;
+            border-left: 5px solid #cc3300;
+        }
+
+        .style3 {
+            background-color: #e6ffed;
+            color: #008000;
+            padding: 40px;
+            border-left: 5px solid #008000;
+        }
+
+        .style4 {
+            background-color: #e6e6ff;
+            color: #6600cc;
+            padding: 40px;
+            border-left: 5px solid #6600cc;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+        .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 100px;  /* Adjust this size according to your logo's size */
+    height: auto;
+}
+
+.header {
+    position: relative;
+    background-color: #4a4af0;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Add some padding to avoid overlap with the logo */
+.header h1 {
+    padding-left: 120px;
+}
+/* Participation Section Styling */
+.participation-section {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-left: 5px solid #70a9e3;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Text styling */
+.participation-section h2 {
+    color: #7ebcf9;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.participation-text {
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Hover animation */
+.participation-section:hover {
+    background-color: #88bcf1;
+    transform: scale(1.05);
+}
+
+.participation-section:hover h2, 
+.participation-section:hover .participation-text {
+    color: white; /* Change text color to white on hover */
+}
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    background-color: #003366;
+    color: white;
+    font-size: 20px;
+    padding: 15px 20px;
+    text-align: left;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #004c99;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+}
+
+.accordion-content ul {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.accordion-content li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.accordion-content.show {
+    max-height: 300px; /* Adjust height depending on the content */
+    padding: 15px 20px;
+}
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    background-color: #0162c3;
+    color: rgb(26, 5, 5);
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 0 0 50px 50px;  /* Curve the bottom of the header */
+}
+
+.header h1 {
+    font-size: 36px;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Smooth Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+    text-align: left;
+    margin: 20px 0;
+    border-radius: 50px;  /* Add rounded corners for all sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add subtle shadow for better effect */
+}
+
+/* Different Styles for Sections */
+.style1 {
+    background-color: #f0f8ff;
+    color: #f49c29;
+    padding: 40px;
+    border-left: 5px solid #003366;
+}
+
+.style2 {
+    background-color: #fffbe6;
+    color: #cc3300;
+    padding: 40px;
+    border-left: 5px solid #cc3300;
+}
+
+.style3 {
+    background-color: #e6ffed;
+    color: #008000;
+    padding: 40px;
+    border-left: 5px solid #008000;
+}
+
+.style4 {
+    background-color: #e6e6ff;
+    color: #6600cc;
+    padding: 40px;
+    border-left: 5px solid #6600cc;
+}
+
+/* Participation Section */
+.participation-section {
+    background-color: #f4f4f4;
+    padding: 40px;
+    border-left: 5px solid #70a9e3;
+    text-align: center;
+    border-radius: 50px;  /* Curved edges */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.participation-section h2 {
+    color: #7ebcf9;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.participation-text {
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.participation-section:hover {
+    background-color: #88bcf1;
+    transform: scale(1.05);
+}
+
+.participation-section:hover h2, 
+.participation-section:hover .participation-text {
+    color: white;  /* Change text color to white on hover */
+}
+
+/* Accordion Styles */
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border-radius: 15px;  /* Curve accordion items */
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+    background-color: #040507;
+    color: rgb(227, 136, 136);
+    font-size: 20px;
+    padding: 15px 20px;
+    text-align: left;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #004c99;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    border-radius: 0 0 15px 15px;  /* Curve bottom part of accordion content */
+}
+
+.accordion-content ul {
+    padding: 15px 0;
+    margin: 0;
+}
+
+.accordion-content li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.accordion-content.show {
+    max-height: 300px;
+    padding: 15px 20px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 50px 50px 0 0;  /* Curve top part of the footer */
+}
+/* Organizing Committee Section */
+.organizing-committee-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.committee-card {
+    background-color: white;
+    border: 2px solid #003366;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.committee-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.committee-card h3 {
+    font-size: 20px;
+    color: #003366;
+    margin: 10px 0;
+}
+
+.committee-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.committee-card i {
+    font-size: 40px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+<style>
+    .registration-section {
+        background-color: #e7f1ff;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .registration-section h2 {
+        color: #0056b3;
+        text-align: center;
+    }
+
+    .registration-info {
+        margin: 20px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .registration-info ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .registration-info li {
+        margin-bottom: 10px;
+    }
+
+    .register-btn {
+        background-color: #0056b3;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+    }
+
+    .register-btn:hover {
+        background-color: #004494;
+    }
+    .registration-info {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.column {
+    flex: 1; /* Each column takes equal space */
+    margin: 10px; /* Add margin around columns */
+    padding: 20px; /* Add padding inside columns */
+    background-color: #f9f9f9; /* Light background for each column */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .column {
+        flex: 100%; /* Stack columns on smaller screens */
+    }
+}
+/* Section Styles */
+.topics-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-left: 5px solid #003366;
+}
+
+/* Grid for Topics */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between columns */
+}
+
+/* Each Topic Box */
+.topic-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for Topic Boxes */
+.topic-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.topic-item h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.topic-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.topic-item li {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .topics-grid {
+        grid-template-columns: 1fr; /* Change to 1 column for small screens */
+    }
+}
+
+/* General Header Styling */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f4f4f4; /* Adjust this to your background preference */
+    border: none; /* Ensure no border on header */
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Main Title and Date Styling */
+.header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header h2 {
+    font-size: 20px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Organized By Section */
+#organized-by {
+    margin-top: 30px;
+    text-align: center;
+    background: none; /* Remove any background color */
+    border: none; /* Remove any border */
+    box-shadow: none; /* Remove any shadow */
+    padding: 0; /* Remove extra padding */
+}
+
+.organized-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.organized-item {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Carousel */
+/* Ensure the images are centered in the carousel */
+.carousel-item img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Optionally reduce the size of carousel controls */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Flexbox container to align images side by side */
+.photo-container {
+    display: flex;
+    justify-content: center; /* Centers the images horizontally */
+    gap: 10px; /* Optional: Adds space between the images */
+    padding: 20px 0; /* Adds some padding at the top and bottom */
+}
+
+/* Style for the images */
+.photo-container img {
+    display: block;
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+.keynote-speakers-section .speakers-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.keynote-speakers-section .column {
+    flex: 1; /* Equal width for both columns */
+    margin: 0 10px; /* Spacing between columns */
+}
+
+.keynote-speakers-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends */
+    align-items: center 20%; /* Center items vertically */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.logo {
+    height: 50px; /* Set logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.logo {
+    flex: 0 0 auto; /* Prevent logos from stretching */
+}
+
+.left-logo img, .right-logo img {
+    max-height: 50px; /* Set a maximum height for logos */
+    height: auto; /* Maintain aspect ratio */
+}
+.logo2 {
+    position: absolute; /* Position it absolutely */
+    top: 20px; /* Adjust top spacing */
+    right: 20px; /* Aligns it to the right */
+}
+
+.logo2 img {
+    height: 60px; /* Adjust this size according to your logo's size */
+    width: auto; /* Maintain aspect ratio */
+}
+#section1 {
+    position: relative;
+    background-image: url('Alvas2.jpg'); /* Replace with your image path */
+    background-size: cover ; /* Ensure the image covers the entire section */
+    background-position: center 20%; /* Center the image */
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.60);
+    background-repeat: no-repeat;
+    padding: 40px 0; /* Optional: Padding for spacing */
+    color: white;
+    border-radius: 50px; /* Rounds the corners */
+    overflow: hidden; /* Prevent the image from overflowing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+#section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity for fade effect */
+    z-index: 1;
+}
+
+#section1 .container {
+    position: relative;
+    z-index: 2;
+}
+
+#section1 h2 {
+    color: rgb(235, 235, 235); /* Set the heading text color to white */
+}
+
+
+.speakers-photos .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between the photos */
+    justify-items: center;
+    padding: 20px 0;
+}
+
+.photo-item {
+    text-align: center;
+}
+
+.photo-item img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    height: 200px; /* Fixed height for uniform display */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/*IINA LOGO*/
+.main-header {
+    background-color: #fff; /* Background color of the header */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;
+}
+
+.logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header .logo,
+.header .logo2,
+.header .logo-container {
+    display: inline-block;
+    margin: 10px;
+}
+
+.header .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-logo {
+    max-width: 250px; /* Adjust as needed */
+    height: auto;
+}
+
+.header img {
+    max-width: 200px; /* Adjust this size based on your logo needs */
+    height: auto;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin: 5px 0 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-logo {
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+.navbar-mainbg {
+    background-color: #5161ce;
+    padding: 0px;
+}
+#navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+}
+#navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+}
+#navbarSupportedContent ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 15px 20px;
+    transition: all 0.6s;
+    position: relative;
+}
+#navbarSupportedContent>ul>li.active>a {
+    color: #5161ce;
+    background-color: #fff;
+    transition: all 0.7s;
+}
+.hori-selector {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.6s;
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+    margin-top: 10px;
+}
+.hori-selector .right,
+.hori-selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    bottom: 10px;
+}
+.hori-selector .right {
+    right: -25px;
+}
+.hori-selector .left {
+    left: -25px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-custom {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbarSupportedContent ul li a {
+        padding: 8px 20px;
+    }
+    .hori-selector {
+        margin-top: 0px;
+        margin-left: 10px;
+        border-radius: 0;
+    }
+    .hori-selector .left,
+    .hori-selector .right {
+        right: 10px;
+    }
+    .hori-selector .left {
+        top: -25px;
+        left: auto;
+    }
+    .hori-selector .right
+    .organizing-committee-section {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.committee-card {
+    background-color: white;
+    border: 2px solid #003366;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.committee-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.committee-card h3 {
+    font-size: 20px;
+    color: #003366;
+    margin: 10px 0;
+}
+
+.committee-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.committee-card i {
+    font-size: 40px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.committee-image {
+    width: 50%;
+    height: 100px; /* Adjust this value if needed */
+    object-fit: cover;
+    border-radius: 10px; /* Matches card corners */
+    display: block; /* Ensures no extra space around the image */
+}
+
+.committee-image {
+    width: 50%;
+    height: 100px; /* Adjust this value to match the height of the first image */
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+#organized-by {
+    margin-top: 30px;
+    text-align: center;
+    background: none; /* Remove any background color */
+    border: none; /* Remove any border */
+    box-shadow: none; /* Remove any shadow */
+    padding: 0; /* Remove extra padding */
+}
+.committee-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 15px; /* This will round the corners */
+}
+
+
+.organized-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.organized-item {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light background color */
+    text-align: center;
+    padding: 20px;
+}
+
+
+    </style>
+</head>
+
+<body>
+   
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"><b>Alva's</b>   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#section4"><i class="fas fa-university"></i> Scope</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#keynote-speakers"><i class="fas fa-user-tie"></i> Speakers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#registration"><i class="fas fa-edit"></i> Registration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#gallery"><i class="fas fa-images"></i> Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#footer-section"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<br>
+<br>
+<br>
+
+    <!-- Header Section -->
+    <header class="header">
+  <div class="container">
+    <div class="logo">
+      <img src="image.png" alt="AIET Logo">
+    </div>
+
+    <div class="logo-container">
+      <img src="IINA.png" alt="Event Logo" class="center-logo">
+    </div>
+
+    <div class="logo2">
+      <img src="BetaLogo.png" alt="Beta Logo">
+    </div>
+
+    <div class="symposium-container">
+        <h1 class="title" style="color: #001f66; text-align: left;">International Symposium</h1>
+        <h2 class="on" style="color: #ff0000;">on</h2>
+      <h2 class="subtitle" style="color: #0033cc;">Recent Advances in Materials Joining and Manufacturing Processes</h2>
+      <p class="date" style="color: #ff0000;">28<sup>th</sup> February and 1<sup>st</sup> March, 2025</p>
+      <p class="organized-by" style="color: #cc00cc;">Organized by</p>
+      <p class="organizers" style="color: #001f66;">Alva’s Institute of Engineering and Technology, Moodbidri, India</p>
+      <p class="in-association" style="color: #00cc00;">In association with</p>
+      <p class="institutes" style="color: #001f66;">Institute of Industrial Nanomaterials <span class="highlight" style="color: #ff0000; font-weight: bold;">(IINa)</span>, Kumamoto University, Japan</p>
+      <p class="and" style="color: #ff0000;">&</p>
+      <p class="institutes" style="color: #001f66;">BETA CAE System India Pvt. Ltd, Bangalore, India</p>
+    </div>
+  </div>
+</header>
+
+
+
+<section class="organizing-committee-section fade-in">
+        <div class="container">
+            <h2>Organizing Committee</h2>
+            <div class="committee-grid">
+                <!-- Chief Patron -->
+                <div class="committee-card">
+                    <img src="download.jpeg" alt="Chief Patron Image" class="committee-image">
+                    <h3>Chief Patron</h3>
+                    <p>Dr. M. Mohan Alva</p>
+                    <p>Chairman, AEF</p>
+                </div>
+                <!-- Patrons -->
+                <div class="committee-card">
+                    <img src="hindi.jpg" alt="Patron Image" class="committee-image">
+                    <h3>Patrons</h3>
+                    <p>Mr. Vivek Alva</p>
+                    <p>Managing Trustee, AEF</p>
+                </div>
+                <!-- Chairpersons -->
+                <div class="committee-card">
+                    <img src="images.jpeg" alt="Patron Image" class="committee-image">
+                    <p>Dr. Peter Fernandes</p>
+                    <p>Principal, AIET</p>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+
+
+
+<section id="photo-gallery" class="photo-gallery">
+    <div class="photo-container">
+        <img src="Picture.png" alt="Photo 1" style="width: 170px; height: 129px;">
+        <img src="Picture1.png" alt="Photo 2" style="width: 170px; height: 129px;">
+        <img src="Picture2.png" alt="Photo 3" style="width: 170px; height: 129px;">
+        <img src="Picture3.png" alt="Photo 4" style="width: 170px; height: 129px;">
+        <img src="Picture4.png" alt="Photo 5" style="width: 170px; height: 129px;">
+    </div>
+</section>
+
+    
+    <!-- Section 1: Alva's Institute of Engineering and Technology -->
+    <section id="section1" class="style1 fade-in">
+        <div class="container">
+            <h2>About AIET</h2><br>
+            <p>Alva's Institute of Engineering and Technology (AIET) is a premier Engineering institute of Alva's Education Foundation (AEF), established in the year 2008. It is an Autonomous institute under VTU. It has a lush green campus spread over 30 acres, a part of Alva's - Shobhavana, and 144 acres spread over a famous herbal garden with more than two thousand varieties of herbal plants. The vision of the institute is to impart quality technical education, moral values, social concern, and patriotism to the students and mould them into excellent professionals and good citizens.</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Institute of Industrial Nanomaterials -->
+    <section id="section2" class="style2 fade-in">
+        <div class="container">
+            <h2>Institute of Industrial Nanomaterials (IINa)</h2>
+            <p>The Institute of Industrial Nanomaterials (IINa) was established in April 2020 at Kumamoto University, Japan. IINa is a global research center that specializes in two-dimensional (2D) nanomaterials including nanosheets, surfaces, and grain boundaries. The Institute has a comprehensive research facility to promote two-dimensional nanomaterial research, as well as special synthesis process facilities including an explosion experiment and bioelectrics research facilities of the formerly Institure of Pulsed Power Science (IPPS).</p>
+        </div>
+    </section>
+
+    <!-- Section 3: Kumamoto University -->
+    <section id="section3" class="style3 fade-in">
+        <div class="container">
+            <h2>Kumamoto University (KU)</h2>
+            <p>Kumamoto University (KU) is one of the oldest universities in Japan founded in 1887 in Kumamoto City, which is nestled in the heart of Kyushu Island in Japan and stands as a beacon of academic excellence and cultural enrichment. Currently, the university is home to around 8,000 undergraduate students and 2,000 graduate students, including 462 international students from 46 countries.</p>
+        </div>
+    </section>
+
+    <!-- Section 4: Scope of the Conference -->
+    <section id="section4" class="style4 fade-in">
+        <div class="container">
+            <h2>Scope of the Conference</h2>
+            <p>Advanced materials joining techniques such as welding, brazing, and soldering are critical components of manufacturing technology. Numerous advanced techniques have been developed to join novel materials. The symposium aims to summarize recent advances in various types of welding, brazing, and soldering, and provide a platform for specialists and research students to present their latest results.</p>
+        </div>
+    </section>
+    <br>
+    <section class="participation-section">
+        <div class="container">
+            <h2>Who Can Participate?</h2>
+            <p class="participation-text">
+                Academician, Research Scholars, PG Students, Engineers, Scientists from Industry and R & D centres
+            </p>
+        </div>
+    </section>
+    <section id="registration" class="registration-section fade-in">
+        <div class="container">
+            <h2>Registration Information</h2>
+            <div class="registration-info">
+                <div class="column">
+                    <h3>Registration Fees:</h3>
+                    <ul>
+                        <li><strong>Research Scholars/PG Students:</strong> ₹2,500</li>
+                        <li><strong>Faculty of Academic Institutions:</strong> ₹5,000</li>
+                        <li><strong>Researchers from Industry:</strong> ₹7,000</li>
+                        <li><strong>International Participants:</strong> $150</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Payment Details:</h3>
+                    <p>
+                        <strong>Account Name:</strong> principalaiet<br>
+                        <strong>Account Number:</strong> 30166494269<br>
+                        <strong>Bank Name:</strong> Canara Bank<br>
+                        <strong>Branch Name:</strong> Moodubidire
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>Accommodation:</h3>
+                    <p>Limited accommodation will be provided based on prior requests on a first-come, first-served basis.</p>
+                </div>
+            </div>
+            <!-- <h3>Registration Link:</h3> -->
+            <div style="text-align: center;">
+                <a href="https://forms.gle/S5LZ5tgQgkPpjpbM6" class="register-btn" target="_blank">Register Here</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <section id="topics-section" class="topics-section fade-in">
+        <div class="container">
+            <h2>Topics to be Covered</h2>
+            <div class="topics-grid">
+                <div class="topic-item">
+                    
+                    <ul>
+                        <li>Explosive Welding</li>
+                        <li>Arc Welding</li>
+                        <li>Additive Manufacturing</li>
+                        <li>Flux cord welding</li>
+                        <li>Shielded metal arc welding</li>
+                        
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <ul>
+                        <li>Fusion Welding</li>
+                        <li>Friction stir welding</li>
+                        <li>Advanced soldering method</li>
+                        <li>TIG and MIG welding</li>
+                        <li>Solid state welding</li>
+                        
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <ul>
+                        <li>Laser welding</li>
+                        <li>Lead (Pb) free soldering</li>
+                        <li>Brazing Techniques</li>
+                        <li>Electron beam welding</li>
+                        <li>Robotic welding</li>
+                        
+                    </ul>
+                </div>
+                <div class="topic-item">
+                    <ul>
+                        <li>Micro Joining</li>
+                        <li>Hyberbaric welding</li>
+                        <li>Powdered compaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="keynote-speakers" class="keynote-speakers-section fade-in">
+        <div class="container">
+            <h2>Key Note / Invited Speakers (Tentative)</h2>
+            <div class="speakers-grid">
+                <div class="column">
+                    <ul>
+                        <li>Dr. K.N Prabhu, NITK, Surathkal</li>
+                        <li>Dr. Shuichi Torii, Kumamoto University, Japan</li>
+                        <li->Er. Ashok Perka, Tata Steels Ltd, Jamshedpur</li>
+                        <li>Dr. K. Hokamoto, Kumamoto University, Japan</li>
+                        <li>Dr. R. Tomoschigi, Sojo University, Japan</li>
+                        <li>Er. Elavena Rajesh, JSW Steel Ltd. Mumbai</li>
+                        <li>Dr. Azman, Jalar University, Malaysia</li>
+                        <li>Dr. Suresh Kulakarni, DIAT, Pune</li>
+                        <li>Dr. Xin Gao, Beijing Institute of Technology, China</li>
+                        <li>Dr. Daisuke Inao, Kumamoto University, Japan</li>
+                        <li>Dr. Manjaiah M, NIT, Warangal</li>
+                        <li>Dr. António B. Pereira, University of Aveiro, Portugal</li>
+                        <li>Dr. T.P.D Rajan, NIIST, Trivendrum, Kerala</li>
+                        <li>Dr. Santhosh Ingole, DRDO, Delhi</li>
+                       
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li>Dr. Shashikanth Karinka, NMAMIT, Nitte</li>
+                        <li>Dr. Somasundaram Saravanan, Annamalai University</li>
+                        <li>Dr. Vijesh V, NMAMIT, Nitte</li>
+                        <li>Dr. Vivek Tiwary, Gogte Institute of Technology</li>
+                        <li>Dr. R. Tomoschigi, Sojo University, Japan</li>
+                        <li>Dr. S. Tanaka, Kumamoto University, Japan</li>
+                        <li>Dr. Akihisa Mori, Sojo University, Japan</li>
+                        <li>Dr. Bataev I.A, Novosibirsk State Tech. Univ, Russia</li>
+                        <li>Dr. M.G. Ananda Kumar, CPRI, Bengaluru</li>
+                        <li>Dr. Shrikantha S. Rao, NITK Surathkal</li>
+                        <li>Dr. Shashikanth Karinka, NMAMIT, Nitte</li>
+                        <li>Dr. S. Janakiraman, IIT Indore</li>
+                        <li>Dr. Prakruthi K, RMIT, Bangalore</li>
+                        <li>Dr. Veerabadrappa Alguru, RYMEC, Bellari</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="speakers-photos" class="speakers-photos fade-in">
+        <div class="container">
+            <h2>Event Highlights</h2>
+            <div class="photos-grid">
+                <div class="photo-item">
+                    <img src="Ashok Kumar Perka.webp" alt="Event Photo 1">
+                    <p>Ashok Kumar Perka</p>
+                </div>
+                <div class="photo-item">
+                    <img src="Dr. B B Sherpa.jpg" alt="Event Photo 2">
+                    <p>Dr. B B Sherpa</p>
+                </div>
+               
+                <div class="photo-item">
+                    <img src="Prof. K Hokamoto.jpg" alt="Event Photo 4">
+                    <p>Prof. K Hokamoto</p>
+                </div>
+                <div class="photo-item">
+                    <img src="Prof. K N Prabhu.JPG" alt="Event Photo 5">
+                    <p>Prof. K N Prabhu</p>
+                </div>
+                <div class="photo-item">
+                    <img src="Prof. Shuichi Torii 1.JPG" alt="Event Photo 6">
+                    <p>Prof. Shuichi Torii</p>
+                </div>
+                <div class="photo-item">
+                    <img src="Dr. M G Ananda Kumar 2.jpg" alt="Event Photo 9">
+                    <p>Dr. M G Ananda Kumar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+
+    <!-- Footer Section -->
+    <footer id ="footer-section" class="footer">
+        <div class="container">
+            <p>Contact: Dr. Satyanarayan | Email: <a href="mailto:mjmp.aiet25@aiet.org.in">mjmp.aiet25@aiet.org.in</a> | Phone: +91 97414 40490</p>
+            <p>© 2025 Alva's Institute of Engineering and Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Smooth Animations -->
+    <script>
+        // Function to show elements with smooth animation when they appear in the viewport
+        function revealOnScroll() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+            fadeIns.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (position < windowHeight - 100) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        // Add event listener for scrolling
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Trigger initial animations
+        revealOnScroll();
+        document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const accordionContent = button.nextElementSibling;
+
+        button.classList.toggle('active');
+
+        if (accordionContent.style.maxHeight) {
+            accordionContent.style.maxHeight = null;
+            accordionContent.style.padding = '0 20px';
+        } else {
+            accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+            accordionContent.style.padding = '15px 20px';
+        }
+    });
+});
+// ---------Responsive-navbar-active-animation-----------
+function test() {
+    var tabsNewAnim = $('#navbarSupportedContent');
+    var activeItemNewAnim = tabsNewAnim.find('.active');
+
+    if (activeItemNewAnim.length) {
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+        var itemPosNewAnimTop = activeItemNewAnim.position();
+        var itemPosNewAnimLeft = activeItemNewAnim.position();
+        $(".hori-selector").css({
+            "top": itemPosNewAnimTop.top + "px", 
+            "left": itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+    }
+}
+
+$(document).ready(function() {
+    setTimeout(function() { test(); });
+});
+$(window).on('resize', function() {
+    setTimeout(function() { test(); }, 500);
+});
+$(".navbar-toggler").click(function() {
+    $(".navbar-collapse").slideToggle(300);
+    setTimeout(function() { test(); });
+});
+
+
+
+    </script>
+
+</body>
+
+</html>
